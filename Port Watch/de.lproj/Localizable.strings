@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Port Watch
+
+  Created by Marco Thümmler on 07.09.22.
+  
+*/
+
+"connection.name" = "Name";
+"connection.pid" = "Prozess ID";
+"connection.protocol" = "Protokoll";
+"connection.localAddress" = "Lokale Adresse";
+"connection.localPort" = "Lokaler Port";
+"connection.remoteAddress" = "Entfernte Adresse";
+"connection.remotePort" = "Entfernter Port";
+"connection.state" = "Zustand";
+"%lld open ports %lld connections %lld selected" = "%lld offene Ports, %lld externe Verbindungen, %lld ausgewählt";
+"refresh.stop" = "Regelmäßiges Aktualisieren stoppen";
+"refresh.start" = "Verbindungen regelmäßig  aktualisieren";

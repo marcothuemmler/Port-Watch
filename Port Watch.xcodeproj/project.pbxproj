@@ -14,6 +14,15 @@
 		A90E1A2428C7F62000DEC03E /* Port_WatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A2328C7F62000DEC03E /* Port_WatchTests.swift */; };
 		A90E1A2E28C7F62000DEC03E /* Port_WatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A2D28C7F62000DEC03E /* Port_WatchUITests.swift */; };
 		A90E1A3028C7F62000DEC03E /* Port_WatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A2F28C7F62000DEC03E /* Port_WatchUITestsLaunchTests.swift */; };
+		A90E1A4228C7F72200DEC03E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4128C7F72200DEC03E /* MainView.swift */; };
+		A90E1A4428C7F75F00DEC03E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4328C7F75F00DEC03E /* MainViewModel.swift */; };
+		A90E1A4728C7F7B700DEC03E /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4628C7F7B700DEC03E /* NetworkProtocol.swift */; };
+		A90E1A4928C7F7E000DEC03E /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4828C7F7E000DEC03E /* NetworkConnection.swift */; };
+		A90E1A4B28C7F81100DEC03E /* NetworkAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4A28C7F81100DEC03E /* NetworkAddress.swift */; };
+		A90E1A4D28C7F85000DEC03E /* ResourceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4C28C7F85000DEC03E /* ResourceUtil.swift */; };
+		A90E1A4F28C7F88600DEC03E /* ConnectionsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4E28C7F88600DEC03E /* ConnectionsUtil.swift */; };
+		A90E1A5228C7FA7100DEC03E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A5128C7FA7100DEC03E /* AppDelegate.swift */; };
+		A90E1A5528C7FBBC00DEC03E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90E1A5728C7FBBC00DEC03E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,19 @@
 		A90E1A2928C7F62000DEC03E /* Port WatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Port WatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90E1A2D28C7F62000DEC03E /* Port_WatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port_WatchUITests.swift; sourceTree = "<group>"; };
 		A90E1A2F28C7F62000DEC03E /* Port_WatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Port_WatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A90E1A4128C7F72200DEC03E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A90E1A4328C7F75F00DEC03E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A90E1A4628C7F7B700DEC03E /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		A90E1A4828C7F7E000DEC03E /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		A90E1A4A28C7F81100DEC03E /* NetworkAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAddress.swift; sourceTree = "<group>"; };
+		A90E1A4C28C7F85000DEC03E /* ResourceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceUtil.swift; sourceTree = "<group>"; };
+		A90E1A4E28C7F88600DEC03E /* ConnectionsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsUtil.swift; sourceTree = "<group>"; };
+		A90E1A5028C7F91F00DEC03E /* Port-Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Port-Watch-Bridging-Header.h"; sourceTree = "<group>"; };
+		A90E1A5128C7FA7100DEC03E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A90E1A5628C7FBBC00DEC03E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A90E1A5828C7FC6600DEC03E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A90E1A5928C7FC8900DEC03E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A90E1A5A28C7FCB800DEC03E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,7 @@
 		A90E1A0528C7F61E00DEC03E = {
 			isa = PBXGroup;
 			children = (
+				A90E1A5028C7F91F00DEC03E /* Port-Watch-Bridging-Header.h */,
 				A90E1A1028C7F61E00DEC03E /* Port Watch */,
 				A90E1A2228C7F62000DEC03E /* Port WatchTests */,
 				A90E1A2C28C7F62000DEC03E /* Port WatchUITests */,
@@ -95,11 +118,17 @@
 		A90E1A1028C7F61E00DEC03E /* Port Watch */ = {
 			isa = PBXGroup;
 			children = (
+				A90E1A3C28C7F63400DEC03E /* View */,
+				A90E1A3D28C7F63B00DEC03E /* ViewModel */,
+				A90E1A3E28C7F64F00DEC03E /* Model */,
+				A90E1A3F28C7F65D00DEC03E /* Utilities */,
 				A90E1A1128C7F61E00DEC03E /* Port_WatchApp.swift */,
 				A90E1A1328C7F61E00DEC03E /* ContentView.swift */,
+				A90E1A5128C7FA7100DEC03E /* AppDelegate.swift */,
 				A90E1A1528C7F62000DEC03E /* Assets.xcassets */,
 				A90E1A1A28C7F62000DEC03E /* Port_Watch.entitlements */,
 				A90E1A1728C7F62000DEC03E /* Preview Content */,
+				A90E1A5728C7FBBC00DEC03E /* Localizable.strings */,
 			);
 			path = "Port Watch";
 			sourceTree = "<group>";
@@ -127,6 +156,49 @@
 				A90E1A2F28C7F62000DEC03E /* Port_WatchUITestsLaunchTests.swift */,
 			);
 			path = "Port WatchUITests";
+			sourceTree = "<group>";
+		};
+		A90E1A3C28C7F63400DEC03E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A90E1A4128C7F72200DEC03E /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A90E1A3D28C7F63B00DEC03E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A90E1A4328C7F75F00DEC03E /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A90E1A3E28C7F64F00DEC03E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A90E1A4528C7F78700DEC03E /* Enums */,
+				A90E1A4828C7F7E000DEC03E /* NetworkConnection.swift */,
+				A90E1A4A28C7F81100DEC03E /* NetworkAddress.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A90E1A3F28C7F65D00DEC03E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A90E1A4C28C7F85000DEC03E /* ResourceUtil.swift */,
+				A90E1A4E28C7F88600DEC03E /* ConnectionsUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A90E1A4528C7F78700DEC03E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A90E1A4628C7F7B700DEC03E /* NetworkProtocol.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +287,9 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				fr,
 			);
 			mainGroup = A90E1A0528C7F61E00DEC03E;
 			productRefGroup = A90E1A0F28C7F61E00DEC03E /* Products */;
@@ -234,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90E1A1928C7F62000DEC03E /* Preview Assets.xcassets in Resources */,
+				A90E1A5528C7FBBC00DEC03E /* Localizable.strings in Resources */,
 				A90E1A1628C7F62000DEC03E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +336,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90E1A1428C7F61E00DEC03E /* ContentView.swift in Sources */,
+				A90E1A4228C7F72200DEC03E /* MainView.swift in Sources */,
+				A90E1A4928C7F7E000DEC03E /* NetworkConnection.swift in Sources */,
+				A90E1A4D28C7F85000DEC03E /* ResourceUtil.swift in Sources */,
+				A90E1A4728C7F7B700DEC03E /* NetworkProtocol.swift in Sources */,
 				A90E1A1228C7F61E00DEC03E /* Port_WatchApp.swift in Sources */,
+				A90E1A4B28C7F81100DEC03E /* NetworkAddress.swift in Sources */,
+				A90E1A4428C7F75F00DEC03E /* MainViewModel.swift in Sources */,
+				A90E1A5228C7FA7100DEC03E /* AppDelegate.swift in Sources */,
+				A90E1A4F28C7F88600DEC03E /* ConnectionsUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +380,26 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		A90E1A5728C7FBBC00DEC03E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90E1A5628C7FBBC00DEC03E /* en */,
+				A90E1A5828C7FC6600DEC03E /* de */,
+				A90E1A5928C7FC8900DEC03E /* es */,
+				A90E1A5A28C7FCB800DEC03E /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		A90E1A3128C7F62000DEC03E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -361,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -431,6 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Port-Watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Port-Watch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -456,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Port-Watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Port-Watch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
