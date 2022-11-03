@@ -27,7 +27,7 @@ struct NetworkConnection: Identifiable, Hashable {
         localAddress = NetworkAddress(using: local)
         remoteAddress = NetworkAddress(using: remote)
         connectionState = networkProtocol.rawValue.hasPrefix("tcp") ? strings[7] : "-"
-        processId = strings[strings.count - 4]
+        processId = strings[strings.count - 10]
         processName = ResourceUtil.processName(for: processId)
         image = ResourceUtil.icon(for: processId)
     }

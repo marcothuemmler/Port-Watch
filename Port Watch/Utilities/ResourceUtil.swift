@@ -11,6 +11,7 @@ final class ResourceUtil {
     
     private static var names = [Int32: String]()
     private static var icons = [Int32: Image]()
+    private static var nsImages = [Int32: NSImage]()
     private static let defaultIcon = Image(nsImage: NSWorkspace.shared.icon(for: .unixExecutable))
     
     private init() {}
@@ -21,6 +22,10 @@ final class ResourceUtil {
         }
         if let processName = names[pid] {
             return processName
+        }
+        if pid == 0 {
+            names[pid] = "kernel_task"
+            return "kernel_task"
         }
         if let name = processes.first(where: { $0.processIdentifier == pid })?.localizedName {
             names[pid] = name
@@ -56,9 +61,20 @@ final class ResourceUtil {
         if let icon = processes.first(where: { $0.processIdentifier == pid })?.icon {
             let image = Image(nsImage: icon)
             icons[pid] = image
+            nsImages[pid] = icon
             return image
         }
         icons[pid] = defaultIcon
         return defaultIcon
+    }
+    
+    static func nsImage(for processId: String) -> NSImage {
+        guard let pid = Int32(processId) else {
+            return NSWorkspace.shared.icon(for: .unixExecutable)
+        }
+        if let image = nsImages[pid] {
+            return image
+        }
+        return NSWorkspace.shared.icon(for: .unixExecutable)
     }
 }
