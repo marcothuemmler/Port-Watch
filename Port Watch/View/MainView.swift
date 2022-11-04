@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MainView: View {
     
+    @Environment(\.openWindow) private var openWindow
     @StateObject private var model = MainViewModel()
     @State private var sortOrder = [KeyPathComparator<NetworkConnection>]()
     @State private var selection = Set<NetworkConnection.ID>()
     @State private var search = ""
+    @Binding var selectedConnections: [NetworkConnection]
     private var connections: [NetworkConnection] {
         model.connections.filter { search.isEmpty || $0.processName.lowercased().contains(search.lowercased()) }.sorted(using: sortOrder)
     }
@@ -30,20 +32,13 @@ struct MainView: View {
                 TableColumn("connection.state", value: \.connectionState)
             }
             .contextMenu(forSelectionType: NetworkConnection.ID.self) { selectedIds in
-                let selectedConnections = connections.filter { selectedIds.contains($0.id) }
                 Button {
-                    for connection in selectedConnections {
-                        let alert = NSAlert()
-                        alert.messageText = connection.processName
-                        alert.informativeText = connection.processId
-                        alert.icon = ResourceUtil.nsImage(for: connection.processId)
-                        alert.runModal()
-                    }
+                    connections.filter { selectedIds.contains($0.id)}.forEach{ selectedConnections.append($0) }
+                    selectedIds.forEach { openWindow(value: $0) }
                 } label: {
                     Label("Info", systemImage: "info.circle.fill").labelStyle(.titleAndIcon)
                 }
-                .disabled(selectedConnections.isEmpty)
-                
+                .disabled(selectedIds.isEmpty)
             }
             .onReceive(model.$connections) {
                 selection = selection.filter($0.map(\.id).contains)

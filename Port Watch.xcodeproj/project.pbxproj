@@ -22,6 +22,8 @@
 		A90E1A4F28C7F88600DEC03E /* ConnectionsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A4E28C7F88600DEC03E /* ConnectionsUtil.swift */; };
 		A90E1A5228C7FA7100DEC03E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E1A5128C7FA7100DEC03E /* AppDelegate.swift */; };
 		A90E1A5528C7FBBC00DEC03E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90E1A5728C7FBBC00DEC03E /* Localizable.strings */; };
+		A92352422915630D006707A1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92352412915630D006707A1 /* DetailView.swift */; };
+		A92352442915CA4C006707A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92352432915CA4C006707A1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		A90E1A5828C7FC6600DEC03E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A90E1A5928C7FC8900DEC03E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A90E1A5A28C7FCB800DEC03E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A92352412915630D006707A1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A92352432915CA4C006707A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				A90E1A4128C7F72200DEC03E /* MainView.swift */,
+				A92352412915630D006707A1 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			children = (
 				A90E1A4C28C7F85000DEC03E /* ResourceUtil.swift */,
 				A90E1A4E28C7F88600DEC03E /* ConnectionsUtil.swift */,
+				A92352432915CA4C006707A1 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -333,8 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90E1A4228C7F72200DEC03E /* MainView.swift in Sources */,
+				A92352442915CA4C006707A1 /* Constants.swift in Sources */,
 				A90E1A4928C7F7E000DEC03E /* NetworkConnection.swift in Sources */,
 				A90E1A4D28C7F85000DEC03E /* ResourceUtil.swift in Sources */,
+				A92352422915630D006707A1 /* DetailView.swift in Sources */,
 				A90E1A4728C7F7B700DEC03E /* NetworkProtocol.swift in Sources */,
 				A90E1A1228C7F61E00DEC03E /* Port_WatchApp.swift in Sources */,
 				A90E1A4B28C7F81100DEC03E /* NetworkAddress.swift in Sources */,
