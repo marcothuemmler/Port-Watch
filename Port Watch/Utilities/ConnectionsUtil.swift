@@ -24,7 +24,7 @@ final class ConnectionsUtil {
             netStatProcess.standardOutput = pipe
             
             grepProcess.launchPath = "/usr/bin/egrep"
-            grepProcess.arguments = ["^(\\w+\\s+){2}(udp|tcp)"]
+            grepProcess.arguments = ["^(\\s?\\w+\\s+){2}(udp|tcp)"]
             grepProcess.standardInput = pipe
             grepProcess.standardOutput = outPipe
 
