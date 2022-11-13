@@ -20,8 +20,8 @@ struct NetworkConnection: Identifiable, Hashable {
     
     init(using input: String) {
         let strings = input.split(omittingEmptySubsequences: true, whereSeparator: \.isWhitespace).map(String.init)
-        let local = strings[5].replacingOccurrences(of: "%\\w+.", with: ".", options: .regularExpression)
-        let remote = strings[6].replacingOccurrences(of: "%\\w+.", with: ".", options: .regularExpression)
+        let local = strings[5].replacingOccurrences(of: "%\\w+", with: "", options: .regularExpression)
+        let remote = strings[6].replacingOccurrences(of: "%\\w+", with: "", options: .regularExpression)
         id = strings[0] + strings[1]
         networkProtocol = NetworkProtocol(using: strings[2])
         localAddress = NetworkAddress(using: local)

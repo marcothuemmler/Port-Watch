@@ -19,14 +19,14 @@ struct DetailView: View {
         VStack(spacing: 2) {
             connection.image
                 .resizable()
-                .frame(width: Constants.detailsIconSize, height: Constants.detailsIconSize)
-                .padding(.bottom, Constants.detailViewIconBottomPadding)
-            InformationRow("connection.name", value: connection.processName)
-            InformationRow("connection.pid", value: connection.processId)
-            InformationRow("connection.protocol", value: connection.networkProtocol.rawValue)
-            InformationRow("connection.state", value: connection.connectionState)
+                .frame(width: Constants.detailViewIconSize, height: Constants.detailViewIconSize)
+                .padding(.bottom, Constants.detailViewVerticalPadding)
+            InformationRow(Constants.connectionName, value: connection.processName)
+            InformationRow(Constants.connectionPid, value: connection.processId)
+            InformationRow(Constants.connectionProtocol, value: connection.networkProtocol.rawValue)
+            InformationRow(Constants.connectionState, value: connection.connectionState)
         }
-        .padding(.horizontal, Constants.detailViewHorizontalPadding)
+        .padding(.vertical, Constants.detailViewVerticalPadding)
         .frame(width: Constants.detailWindowWidth, height: Constants.detailWindowHeight)
         .background(VisualEffectView().ignoresSafeArea())
     }
@@ -36,8 +36,8 @@ struct DetailView: View {
         let title: LocalizedStringKey
         let value: String
         
-        init(_ title: String, value: String) {
-            self.title = LocalizedStringKey(title)
+        init(_ title: LocalizedStringKey, value: String) {
+            self.title = title
             self.value = value
         }
         
@@ -48,6 +48,7 @@ struct DetailView: View {
                 Spacer()
                 Text(value)
             }
+            .padding(.horizontal, Constants.detailViewHorizontalPadding)
         }
     }
 }

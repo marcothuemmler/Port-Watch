@@ -22,21 +22,21 @@ struct MainView: View {
     var body: some View {
         VStack(spacing: 0) {
             Table(connections, selection: $selection, sortOrder: $sortOrder) {
-                TableColumn("connection.name", value: \.processName, content: ProcessNameColumn.init)
-                TableColumn("connection.pid", value: \.processId)
-                TableColumn("connection.protocol", value: \.networkProtocol.rawValue)
-                TableColumn("connection.localAddress", value: \.localAddress.ip)
-                TableColumn("connection.localPort", value: \.localAddress.port)
-                TableColumn("connection.remoteAddress", value: \.remoteAddress.ip)
-                TableColumn("connection.remotePort", value: \.remoteAddress.port)
-                TableColumn("connection.state", value: \.connectionState)
+                TableColumn(Constants.connectionName, value: \.processName, content: ProcessNameColumn.init)
+                TableColumn(Constants.connectionPid, value: \.processId)
+                TableColumn(Constants.connectionProtocol, value: \.networkProtocol.rawValue)
+                TableColumn(Constants.localAddress, value: \.localAddress.ip)
+                TableColumn(Constants.localPort, value: \.localAddress.port)
+                TableColumn(Constants.remoteAddress, value: \.remoteAddress.ip)
+                TableColumn(Constants.remotePort, value: \.remoteAddress.port)
+                TableColumn(Constants.connectionState, value: \.connectionState)
             }
             .contextMenu(forSelectionType: NetworkConnection.ID.self) { selectedIds in
                 Button {
-                    connections.filter { selectedIds.contains($0.id)}.forEach{ selectedConnections.append($0) }
+                    selectedConnections.append(contentsOf: connections.filter { selectedIds.contains($0.id) })
                     selectedIds.forEach { openWindow(value: $0) }
                 } label: {
-                    Label("Info", systemImage: "info.circle.fill").labelStyle(.titleAndIcon)
+                    Label("Info", systemImage: Constants.infoCircleFill).labelStyle(.titleAndIcon)
                 }
                 .disabled(selectedIds.isEmpty)
             }
@@ -45,21 +45,24 @@ struct MainView: View {
             }
             Divider()
             HStack {
-                Text("\(connections.count) open ports \(model.remoteIPs) connections \(selection.count) selected")
+                Text(Constants.mainWindowFooterInfo(connections.count, model.remoteIPs, selection.count))
                 Spacer()
                 Button(action: model.toggleTimer) {
-                    Image(systemName: "circle.fill")
-                        .foregroundColor(model.timerRepeats ? .green : Color(.lightGray))
+                    Image(systemName: Constants.circleFill)
+                        .foregroundColor(model.timerRepeats ? .green : .lightGray)
                 }
                 .buttonStyle(.borderless)
-                .shadow(color: Color(.darkGray), radius: 0.6, x: 0.3, y: 0.3)
-                .help(model.timerRepeats ? "refresh.stop" : "refresh.start")
+                .shadow(
+                    color: .darkGray,
+                    radius: Constants.reloadButtonShadowRadius,
+                    x: Constants.reloadButtonShadowXPosition,
+                    y: Constants.reloadButtonShadowYPosition)
+                .help(model.timerRepeats ? Constants.refreshStop : Constants.refreshStart)
             }
             .padding(.horizontal)
-            .padding(.vertical, 5.0)
+            .padding(.vertical, Constants.mainWindowFooterHorizontalPadding)
         }
-        .font(Font(CTFont(.label, size: 12)))
-        .frame(minWidth: 500, idealWidth: 800, minHeight: 500, idealHeight: 600)
+        .font(.mainTableFont)
         .searchable(text: $search)
     }
 }
@@ -73,8 +76,8 @@ private struct ProcessNameColumn: View {
             connection.image
                 .resizable()
                 .scaledToFit()
-                .frame(width: 18, height: 18)
-                .padding(.horizontal, 10)
+                .frame(height: Constants.mainTableIconSize)
+                .padding(.horizontal, Constants.mainTableIconPadding)
             Text(connection.processName)
                 .help(Text(connection.processName))
         }

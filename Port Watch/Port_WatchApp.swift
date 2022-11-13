@@ -16,12 +16,16 @@ struct Port_WatchApp: App {
         WindowGroup {
             MainView(selectedConnections: $selectedConnections)
         }
+        .commands { CommandGroup(replacing: .newItem) { } }
+            .defaultSize(width: Constants.mainWindowDefaultWidth, height: Constants.mainWindowDefaultHeight)
         WindowGroup(for: NetworkConnection.ID.self) { $id in
             if let connection = selectedConnections.first { $0.id == id } {
                 DetailView(for: connection)
+                    .onDisappear { selectedConnections.removeAll { $0.id == id } }
             }
         }
-        .windowStyle(HiddenTitleBarWindowStyle())
+        .defaultPosition(.center)
+        .windowStyle(.hiddenTitleBar)
         .windowResizability(.contentSize)
     }
 }
